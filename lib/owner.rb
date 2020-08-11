@@ -1,6 +1,6 @@
 class Owner
   attr_reader :name, :species
-  
+
   @@all = []
 
   def initialize(name)
@@ -10,7 +10,7 @@ class Owner
   end
 
   def say_species
-    "I am a #{self.species}"
+    "I am a human."
   end
 
   def self.all
@@ -57,4 +57,4 @@ class Owner
   def list_pets
     "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
   end
-end
+end 
