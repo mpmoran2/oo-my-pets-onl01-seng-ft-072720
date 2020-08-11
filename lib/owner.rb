@@ -1,5 +1,7 @@
 class Owner
+  attr_accessor :pets
   attr_reader :name, :species
+  
 
   @@all = []
 
@@ -50,8 +52,8 @@ class Owner
   end
 
   def sell_pets
-    self.dogs.map{ |dog| dog.mood = "nervous"; dog.owner = nil}
-    self.cats.map{ |cat| cat.mood = "nervous"; cat.owner = nil}
+    self.pets.collect {|p| p.mood = "nervous"}
+    self.pets.each {|o| o.owner = nil}
   end
 
   def list_pets
