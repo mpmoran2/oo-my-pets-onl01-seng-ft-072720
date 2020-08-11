@@ -1,8 +1,6 @@
 class Owner
-  attr_accessor :pets
   attr_reader :name, :species
   
-
   @@all = []
 
   def initialize(name)
@@ -51,10 +49,6 @@ class Owner
     self.cats.map{ |cat| cat.mood = "happy"}
   end
 
-  def pets 
-    self.pets = self.dogs + self.cats 
-  end 
-  
   def sell_pets
     self.dogs.map{ |dog| dog.mood = "nervous"; dog.owner = nil}
     self.cats.map{ |cat| cat.mood = "nervous"; cat.owner = nil}
